@@ -292,11 +292,11 @@
         )
       )
     )
-    (symbol "Mechanical:MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-      (property "Reference" "H" (at 0 5.08 0)
+    (symbol "Mechanical:MountingHole_Pad" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "H" (at 0 6.35 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "MountingHole" (at 0 3.175 0)
+      (property "Value" "MountingHole_Pad" (at 0 4.445 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -308,16 +308,22 @@
       (property "ki_keywords" "mounting hole" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Mounting Hole without connection" (at 0 0 0)
+      (property "ki_description" "Mounting Hole with connection" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "MountingHole*" (at 0 0 0)
+      (property "ki_fp_filters" "MountingHole*Pad*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "MountingHole_0_1"
-        (circle (center 0 0) (radius 1.27)
+      (symbol "MountingHole_Pad_0_1"
+        (circle (center 0 1.27) (radius 1.27)
           (stroke (width 1.27) (type default))
           (fill (type none))
+        )
+      )
+      (symbol "MountingHole_Pad_1_1"
+        (pin input line (at 0 -2.54 90) (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -452,10 +458,24 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
+  (global_label "GND" (shape input) (at 222.25 90.17 270) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid b03ee9a3-0d13-4b1d-b9dd-f517344dbcba)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 222.25 96.9463 90)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
   (global_label "VDDHI" (shape input) (at 170.18 59.69 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid e5bc247c-42fb-4473-8667-48ac8da05086)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 161.7103 59.69 0)
+      (effects (font (size 1.27 1.27)) (justify right) hide)
+    )
+  )
+  (global_label "GND" (shape input) (at 222.25 76.2 270) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid f0eb2e57-7d0b-4bd8-9914-19fcfd0f3a3b)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 222.25 82.9763 90)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
@@ -496,7 +516,7 @@
     (pin "5" (uuid b30099c5-2a40-4247-b736-e8c208c76370))
     (pin "6" (uuid 1126ec1b-ab01-4f04-a77c-d080a874ef9c))
     (instances
-      (project "Tps-xx-breakout"
+      (project "Tps-65-breakout"
         (path "/2cbe04c3-122d-4cbd-b6ed-decb93773a4a"
           (reference "J1") (unit 1)
         )
@@ -504,23 +524,24 @@
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 222.25 85.09 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 222.25 87.63 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 42b485ad-9cb1-49e6-8072-ef998f22d486)
-    (property "Reference" "H2" (at 224.79 83.82 0)
+    (property "Reference" "H2" (at 224.79 86.36 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "MountingHole" (at 224.79 86.36 0)
+    (property "Value" "MountingHole" (at 224.79 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.2mm_M2" (at 222.25 85.09 0)
+    (property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad" (at 222.25 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 222.25 85.09 0)
+    (property "Datasheet" "~" (at 222.25 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (pin "1" (uuid b9f9cef2-897a-4bb7-b6f3-03c0efed6ce2))
     (instances
-      (project "Tps-xx-breakout"
+      (project "Tps-65-breakout"
         (path "/2cbe04c3-122d-4cbd-b6ed-decb93773a4a"
           (reference "H2") (unit 1)
         )
@@ -550,7 +571,7 @@
     (pin "5" (uuid 4a78869f-075b-436f-a85d-97277e2958a5))
     (pin "6" (uuid 03bfefa0-a63f-4663-a442-459ec25633c4))
     (instances
-      (project "Tps-xx-breakout"
+      (project "Tps-65-breakout"
         (path "/2cbe04c3-122d-4cbd-b6ed-decb93773a4a"
           (reference "J2") (unit 1)
         )
@@ -558,7 +579,7 @@
     )
   )
 
-  (symbol (lib_id "Mechanical:MountingHole") (at 222.25 73.66 0) (unit 1)
+  (symbol (lib_id "Mechanical:MountingHole_Pad") (at 222.25 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 664110b7-6836-4b5c-86cf-46e5a4064eac)
     (property "Reference" "H1" (at 224.79 72.39 0)
@@ -567,14 +588,15 @@
     (property "Value" "MountingHole" (at 224.79 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "MountingHole:MountingHole_2.2mm_M2" (at 222.25 73.66 0)
+    (property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad" (at 222.25 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 222.25 73.66 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (pin "1" (uuid 19cd6c3c-334a-43ec-b73d-fd88df39b159))
     (instances
-      (project "Tps-xx-breakout"
+      (project "Tps-65-breakout"
         (path "/2cbe04c3-122d-4cbd-b6ed-decb93773a4a"
           (reference "H1") (unit 1)
         )
@@ -600,7 +622,7 @@
     (pin "1" (uuid 7c0cc5ce-6d9f-4202-b225-1620b4f9015c))
     (pin "2" (uuid 3350c84e-0399-4378-9f47-51e2dba521d0))
     (instances
-      (project "Tps-xx-breakout"
+      (project "Tps-65-breakout"
         (path "/2cbe04c3-122d-4cbd-b6ed-decb93773a4a"
           (reference "R2") (unit 1)
         )
@@ -626,7 +648,7 @@
     (pin "1" (uuid 2ec4cda6-f8a4-4bee-a351-3db31cf6ec3c))
     (pin "2" (uuid 5f23d1ef-2a6f-4895-aca6-a873d26b42b4))
     (instances
-      (project "Tps-xx-breakout"
+      (project "Tps-65-breakout"
         (path "/2cbe04c3-122d-4cbd-b6ed-decb93773a4a"
           (reference "R1") (unit 1)
         )
